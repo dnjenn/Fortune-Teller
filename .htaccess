@@ -1,0 +1,17 @@
+RewriteEngine on
+
+
+ RewriteCond %{REQUEST_FILENAME} !-f 
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(setup)$ setup.php [L]
+ RewriteRule ^(example|test|config)/(.*)$ $1/$2 [L]
+
+# Keeps the page from redirecting back to /index.php
+  RewriteCond %{ENV:REDIRECT_STATUS} 200
+  RewriteCond %{SCRIPT_FILENAME} !-f
+  RewriteCond %{SCRIPT_FILENAME} !-d
+  RewriteRule .* - [L]
+  
+  RewriteCond %{SCRIPT_FILENAME} !-f
+  RewriteCond %{SCRIPT_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?page=$1 [L]
