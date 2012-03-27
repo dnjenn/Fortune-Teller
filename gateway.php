@@ -1,4 +1,13 @@
 <?php
+	require_once('config/config.php');
+	
+	if(isset($_POST['input']))
+	{
+		foreach($_POST['input'] as $key=>$value)
+		{
+			$ifilter[$key] = $value;
+		}
+	}
 	
 	$page = $_GET['page'];
 	$file = 'process/'.$page.'.php';

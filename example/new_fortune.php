@@ -1,7 +1,4 @@
-<? if(file_exists("config/config.php"))
-{
-	require_once("config/config.php"); 
-?>
+<?php require_once("../config/config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +12,14 @@
 		$('button').click(function() {
 			var value = $('input').val(); 
 			var input = {fortune : value};
-			$.post('/api/newFortune', {'input' : input}, function(data) {
-				console.log(data);
+			$.ajax({
+				url: '/api/newFortune', 
+				data: {'input' : input}, 
+				type: 'POST',
+				dataType: 'json',
+				success: function(data) {
+					$('#result').html('It came back '+data.toString());
+				},
 			});
 		});
 	});
@@ -41,21 +44,9 @@
 ?>
 <input type="text" />
 <button>Press</button>
-</body>
-</html>
+<p>This will return true on success and false on failure</p>
+<p>So do data.success to see it.</p>
 
-<?php } else { ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title><?=$title;?></title>
-<link rel="stylesheet" href="assets/css/styles.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="assets/js/scripts.js"></script>
-</head>
-<body>
-	Please make the config file and run setup.
+<p id="result"></p>
 </body>
 </html>
-<?php } ?>

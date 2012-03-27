@@ -118,9 +118,16 @@ else
 	die();
 }
 $queryArray = array(
-	array("Table creation query goes here", "Table description for setup goes here."),
-	array("Table creation query goes here", "Table description for setup goes here."),
-	array("skip", "This array skips the table creation and just passes a message to the user.")
+	array("CREATE TABLE IF NOT EXISTS `information` (
+			  `id` int(4) NOT NULL auto_increment,
+			  `level` int(11) NOT NULL,
+			  `description` varchar(255) NOT NULL,
+			  `flagged` tinyint(1) NOT NULL,
+			  `time` int(11) NOT NULL,
+			  PRIMARY KEY  (`id`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+", "Creating Description Table."),
+	array("skip", "Setup Complete.")
 );
 
 echo "<ul id='results'>";
@@ -131,15 +138,15 @@ foreach($queryArray as $query)
 {
 	if($query[0] != "skip")
 	{
-		//if($pdo->prepare($query[0])->execute())
-		//{
+		if($pdo->prepare($query[0])->execute())
+		{
 			echo "<li class='hidden'>".$query[1]."</li>";
-		//}
-		//else
-		//{
-			//echo '<li class="hidden">Setup has already been run</li>';
-			//break;
-		//}
+		}
+		else
+		{
+			echo '<li class="hidden">Setup has already been run</li>';
+			break;
+		}
 	}
 	else
 	{
