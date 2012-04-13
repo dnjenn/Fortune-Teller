@@ -138,7 +138,7 @@ foreach($queryArray as $query)
 {
 	if($query[0] != "skip")
 	{
-		if($pdo->prepare($query[0])->execute())
+		if($database->query($query[0]))
 		{
 			echo "<li class='hidden'>".$query[1]."</li>";
 		}

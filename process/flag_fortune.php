@@ -2,7 +2,7 @@
 	$fortune = $ifilter['id'];
 	$date = time();
 
-	if($pdo->prepare("UPDATE information SET flagged=1 WHERE id=$id")->execute())
+	if($database->query("UPDATE information SET flagged=1 WHERE id=$id"))
 	{
 		echo json_encode(array('success' => true));
 	}

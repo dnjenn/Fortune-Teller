@@ -1,10 +1,8 @@
 <?php
-try{
-  $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);  
-}  
-catch(PDOException $e) {  
-    echo $e->getMessage(); 
-}
+
+include(BASE."core/classes/database.php");
+
+$database = new Database($host, $dbname, $user, $password, $dbType);
 
 function __autoload($classname) {
     $filename = "../core/classes/". $classname .".php";

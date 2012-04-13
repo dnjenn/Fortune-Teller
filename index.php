@@ -10,18 +10,6 @@
 <link rel="stylesheet" href="assets/css/styles.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="assets/js/scripts.js"></script>
-<script>
-	$(document).ready(function() {
-		$('button').click(function() {
-			var value = $('input').val(); 
-			var input = {fortune : value};
-			$.post('/api/newFortune', {'input' : input}, function(data) {
-				console.log(data);
-			});
-		});
-	});
-
-</script>
 </head>
 <body>
 
@@ -39,8 +27,6 @@
 		}
 	}
 ?>
-<input type="text" />
-<button>Press</button>
 </body>
 </html>
 

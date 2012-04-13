@@ -4,7 +4,7 @@
 
 	if(!preg_match('/(shit|piss|fuck|cunt|cock|fuck|damn)/', $fortune))
 	{
-		if($pdo->prepare("INSERT INTO information (level, description, flagged, time) VALUES (4, '$fortune', 0, $date)")->execute())
+		if($database->query("INSERT INTO information (level, description, flagged, time) VALUES (4, '$fortune', 0, $date)"))
 		{
 			echo json_encode(array('success' => true));
 		}

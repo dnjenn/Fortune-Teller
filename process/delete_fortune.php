@@ -2,7 +2,7 @@
 	$fortune = $ifilter['id'];
 	$date = time();
 
-	if($pdo->prepare("DELETE FROM information WHERE id=$id")->execute())
+	if($database->query("DELETE FROM information WHERE id=$id"))
 	{
 		echo json_encode(array('success' => true));
 	}
