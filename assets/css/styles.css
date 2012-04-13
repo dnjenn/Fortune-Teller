@@ -1,0 +1,108 @@
+/* ------------------- Basic --------------------------- */
+p, a {
+	font-family: Georgia, serif;
+	text-decoration: none;
+	color: #793e3c;
+}
+
+/* ------------------- World --------------------------- */
+body {
+	background: url('../img/content_background.jpg') repeat;
+}
+#main {
+	background: url('../img/content_background_main.png') repeat;
+	max-width: 980px;
+	padding-left:20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ------------------- Header --------------------------- */
+
+#header {
+	height:200px;
+	background: url('../img/header_background2.png') no-repeat;
+}
+
+#header h1 {
+	width: 662px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Arvo', serif;
+	font-size: 55px;
+	color: #793e3c;
+	background-color: rgba(238,226,208,0.4);
+	padding: 10px;
+	padding-top: 20px;
+}
+
+/* ------------------- Content --------------------------- */
+#content {
+	height: 370px;
+	position: relative;
+	top: -100px;
+}
+#content div {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.stageBlock {
+	height: 500px;
+	width: 500px;
+}
+
+/* ------------------- Fortune page --------------------------- */
+
+#stage {
+/*	background:url('../img/step1_1.png') no-repeat; */
+}
+
+.stepTop {
+	height: 20px;
+	padding-top: 200px;
+	float:left;
+}
+.stepBottom {
+	height: 20px;
+	padding-top: 130px;
+	float:left;
+}
+
+.stepLeft {
+	margin-left: 80px;
+}
+.stepRight {
+	margin-left: 100px;
+}
+
+
+/* ------------------- Writer's page --------------------------- */
+
+
+/* ------------------- Login page --------------------------- */
+
+
+/* ------------------- Webmaster page --------------------------- */
+
+
+
+/* ------------------- Footer --------------------------- */
+#footer {
+	height:60px;
+	background: url('../img/footer_background.png') no-repeat;
+	padding-top: 60px; /* fix this */
+}
+#footer a {
+	margin-left: 10%;
+	margin-right: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
+	font-size: 1.3em;
+}
+#footer p {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 0.9em;
+	color: #444;
+}

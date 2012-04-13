@@ -1,0 +1,50 @@
+/* Styles derived from Drupal's Mobile theme as created by:
+//Developer and Maintainer: Laura Scott
+//Mobile Version 6.x, 7.x-1.x
+//Maintainer: Richard Eriksson
+//Original Author: BËr Kessels */
+
+/* pads and netbooks */
+@media (max-width: 960px) {
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 680px) {
+  #content img {
+    margin: 0;
+  }
+}
+/* iPhone etc */
+@media (max-width: 480px) {
+  body {
+      font-size: 86%;
+  }
+}
+
+@media (max-width: 480px) {
+	#main {
+		width: 100%;
+		padding: 0px;
+	}
+	#header h1 {
+		font-size: 30px;
+		width: 300px;
+	}
+	#content {
+		clear: both;
+	}
+	.origami {
+		margin-left: 10px;
+		width: 80%;
+	}
+
+	#footer {
+		padding: 0px;
+	}
+	#footer a {
+		margin-top: 50px;
+
+	}
+}
