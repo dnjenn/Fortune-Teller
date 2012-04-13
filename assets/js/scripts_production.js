@@ -67,13 +67,14 @@ function stageTwo() {
 		stage.innerHTML = "";
 //		document.getElementById("stage").style.visibility= "visible";
 		document.getElementById("stage").style.backgroundImage="url('assets/img/step2_1.png')";
-
-		stage.innerHTML += "<div id='divStageTwo'><div class='stepTop'>" +
-		"<a id='one' class='stepLeft' href='' >One</a>" +
-		"<a id='two' class='stepRight' href='' >Two</a> </div>" +
-		"<div class='stepBottom'>" +
-		"<a id='three' class='stepLeft' href='' >Three</a>" +
-		"<a id='four' class='stepRight' href='' >Four</a> </div></div>";
+		$.post('/api/select_step_two', function(data) {
+			stage.innerHTML += "<div id='divStageTwo'><div class='stepTop'>" +
+			"<a id='one' class='stepLeft' href='' >"+data.options[0]+"</a>" +
+			"<a id='two' class='stepRight' href='' >"+data.options[1]+"</a> </div>" +
+			"<div class='stepBottom'>" +
+			"<a id='three' class='stepLeft' href='' >"+data.options[2]+"</a>" +
+			"<a id='four' class='stepRight' href='' >"+data.options[3]+"</a> </div></div>";
+		});
 	if(stage != null) {
 		checkAnchor();
 	}
