@@ -4,7 +4,6 @@ RewriteEngine on
  RewriteCond %{REQUEST_FILENAME} !-f 
  RewriteCond %{REQUEST_FILENAME} !-d
  RewriteRule ^(setup)$ setup.php [L]
- RewriteRule ^(example|test|config)/(.*)$ $1/$2 [L]
  RewriteRule ^api/(.*)/(.*)$ gateway.php?page=$1&param=$2 [L]
  RewriteRule ^api/(.*)$ gateway.php?page=$1 [L]
 

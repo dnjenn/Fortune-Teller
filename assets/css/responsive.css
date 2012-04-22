@@ -24,27 +24,124 @@
 }
 
 @media (max-width: 480px) {
+
+/* ------------------- Header --------------------------- */
 	#main {
-		width: 100%;
 		padding: 0px;
+		margin: 0px;
 	}
 	#header h1 {
-		font-size: 30px;
 		width: 300px;
+		height: 130px;
+		font-size: 35px;
+		text-align: center;
+		padding-bottom: 5px;
 	}
+
 	#content {
 		clear: both;
+		font-size: 22px;
+		margin:0px;
+		padding: 0px;
+		margin-top: -90px;
 	}
-	.origami {
-		margin-left: 10px;
-		width: 80%;
+	#stage {
+		margin-left: 8%;
+	}
+	#stageFortune {
+		margin: 0px;
+		padding:0px;
+	}
+/* ------------------- Fortune page --------------------------- */
+	#divStageOne {
+		background:url('../img/step1_1_mini.png') no-repeat;
+	}
+	#divStageTwo {
+		background:url('../img/step2_3_mini.png') no-repeat;
+	}
+	#divStageThree {
+		background:url('../img/step3_3_mini.png') no-repeat;
+	}
+	#divStageFour {
+		background:url('../img/step4_4_mini.png') no-repeat;
+	}
+	.stepTop {
+		height: 20px;
+		padding-top: 120px;
+		float:left;
+	}
+	.stepBottom {
+		height: 20px;
+		padding-top: 110px;
+		float:left;
+	}
+	.stepLeft {
+		margin-left: 50px;
+	}
+	.stepRight {
+		margin-left: 70px;
+	}
+	.stageBlock {
+		height: 360px;
+		width: 270px;
+	}
+/* ------------------- Fortune page- Fortune presented --------------------------- */
+	#fortune{
+		margin-top: 50px;
+	}
+	#fortune h2 {
+		font-size: 28px;
+		margin-left: 2%;
+		margin-bottom: 10px;
+	}
+	#fortune p {
+		margin:-40px;
 	}
 
+/* ------------------- Admin --------------------------- */
+#table {
+	font-size: 14px;
+	padding: 0px;
+	margin:0px;
+	width: 100%;
+}
+.td_fortune {
+	padding-left: 4px;
+}
+.td_flag {
+	width: 60px;
+	padding-right:0px;
+}
+.checkBox {
+	height: 15px;
+	margin: 0px;
+	margin-top: 35px;
+}
+
+.fortune {
+	padding-left:0px;
+    padding-right:0px;
+}
+.flag {
+	width: 60px;
+	padding-right:0px;
+}
+tr span {
+	display: inline-block;
+	width: 100%;
+}
+
+
+/* ------------------- Footer --------------------------- */
 	#footer {
-		padding: 0px;
+	height: 120px;
 	}
 	#footer a {
-		margin-top: 50px;
-
+		font-size: 22px;
+		padding: 5px;
+	}
+	#footer p {
+		padding-top: 8px;
+		font-size: 18px;
 	}
 }

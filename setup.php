@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	
+
 	<head>
 
 	<title>Database Setup</title>
@@ -52,7 +52,7 @@
 			border-left:5px solid rgba(0,0,0,0);
 			border-right:5px solid rgba(0,0,0,0);
 			border-radius:50px;
-			box-shadow: 0 0 15px #666; 
+			box-shadow: 0 0 15px #666;
 			width:30px;
 			height:30px;
 			margin:0 auto;
@@ -138,7 +138,7 @@ foreach($queryArray as $query)
 {
 	if($query[0] != "skip")
 	{
-		if($pdo->prepare($query[0])->execute())
+		if($database->query($query[0]))
 		{
 			echo "<li class='hidden'>".$query[1]."</li>";
 		}

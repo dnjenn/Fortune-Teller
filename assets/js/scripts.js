@@ -1,11 +1,12 @@
 window.onload = function() {
 	var anchorTagMe = "";
 
-	var stage = document.getElementById('stage');
-	if(stage) {
-		stageOne();
-		console.log('stage one');
-	}
+var stage = document.getElementById('stage');
+if(stage) {
+	stageOne();
+	console.log('stage one');
+}
+
 
 
 ///// function to listen for an anchor click
@@ -41,14 +42,10 @@ window.onload = function() {
 	}
 
 
-
+// element id's: "red" || "yellow" || "blue" || "green"
 function stageOne() {
 	stage.innerHTML = "";
-// element id's: "red" || "yellow" || "blue" || "green"
-	//console.log(stage);
-	stage.style.background="url('assets/img/step1_1.png')";
-
-	stage.innerHTML += "<div id='divStageOne'><div class='stepTop'>" +
+	stage.innerHTML += "<div id='divStageOne' class='stageBlock'><div class='stepTop'>" +
 	"<a id='red' class='stepLeft' href='' >Red</a>" +
 	"<a id='yellow' class='stepRight' href='' >Yellow</a> </div>" +
 	"<div class='stepBottom'>" +
@@ -57,18 +54,12 @@ function stageOne() {
 	if(stage != null) {
 		checkAnchor();
 	}
-
-	// change background image in CSS
-	// then add animation
 }
 
 // element id's: "one" || "two" || "three" || "four"
 function stageTwo() {
 		stage.innerHTML = "";
-//		document.getElementById("stage").style.visibility= "visible";
-		document.getElementById("stage").style.backgroundImage="url('assets/img/step2_1.png')";
-
-		stage.innerHTML += "<div id='divStageTwo'><div class='stepTop'>" +
+		stage.innerHTML += "<div id='divStageTwo' class='stageBlock'><div class='stepTop'>" +
 		"<a id='one' class='stepLeft' href='' >One</a>" +
 		"<a id='two' class='stepRight' href='' >Two</a> </div>" +
 		"<div class='stepBottom'>" +
@@ -77,15 +68,12 @@ function stageTwo() {
 	if(stage != null) {
 		checkAnchor();
 	}
-// change background image in CSS
-// then add animation
 }
 
-// the following are element id's "five" || "six" || "seven" || "eight"
 // element id's: "five" || "six" || "seven" || "eight"
 function stageThree() {
 		stage.innerHTML = "";
-		stage.innerHTML += "<div id='divStageThree'><div class='stepTop'>" +
+		stage.innerHTML += "<div id='divStageThree' class='stageBlock'><div class='stepTop'>" +
 		"<a id='five' class='stepLeft' href='' >Five</a>" +
 		"<a id='six' class='stepRight' href='' >Six</a> </div>" +
 		"<div class='stepBottom'>" +
@@ -94,17 +82,21 @@ function stageThree() {
 	if(stage != null) {
 		checkAnchor();
 	}
-// change background image in CSS
-// then add animation
 }
 
 // print the fortune
 function stageFour() {
-			console.log('starthere');
 			stage.innerHTML = "";
-			stage.innerHTML += "<div id='divStageFour'><div class='stepTop' id='divStageFour'>Fortune</div></div>";
-// change background image in CSS
-// then add animation
+			stage.innerHTML += "<div id='divStageFour' class='stageBlock'>" +
+			"<div id='fortune' class='stepTop' >" +
+			"<span class='fortuneKeeper'>" +
+			"<h2>Fortune</h2><p>" +
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et erat lectus. Proin sollicitudin, justo eu iaculis hendrerit, sapien tellus d</p>" +
+			"<span class='checkBox'>Flag Fortune?<br />" +
+			"<input class='check' type='checkbox' name='flag' value='Flag' />" +
+			"<input class='clickSubmit' type='submit' name='submit' value='Submit' />" +
+			"</span></span></div></div>";
+//			stage.innerHTML += "<div id='divStageFour' class='stageBlock'><div class='stepTop' id='divStageFour'>Fortune</div></div>";
 }
 
 

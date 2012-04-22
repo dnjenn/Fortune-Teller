@@ -25,7 +25,7 @@ body {
 }
 
 #header h1 {
-	width: 662px;
+	width: 670px;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Arvo', serif;
@@ -38,26 +38,37 @@ body {
 
 /* ------------------- Content --------------------------- */
 #content {
-	height: 370px;
-	position: relative;
-	top: -100px;
+	margin-top: -100px;
 }
-#content div {
+#stageFortune {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#stage {
 	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 }
 .stageBlock {
-	height: 500px;
-	width: 500px;
+	height: 445px;
+	width: 350px;
 }
 
 /* ------------------- Fortune page --------------------------- */
 
-#stage {
-/*	background:url('../img/step1_1.png') no-repeat; */
+#divStageOne {
+	background:url('../img/step1_1.png') no-repeat;
 }
-
+#divStageTwo {
+	background:url('../img/step2_3.png') no-repeat;
+}
+#divStageThree {
+	background:url('../img/step3_3.png') no-repeat;
+}
+#divStageFour {
+	background:url('../img/step4_4.png') no-repeat;
+}
 .stepTop {
 	height: 20px;
 	padding-top: 200px;
@@ -68,25 +79,128 @@ body {
 	padding-top: 130px;
 	float:left;
 }
-
 .stepLeft {
 	margin-left: 80px;
 }
 .stepRight {
 	margin-left: 100px;
 }
+/* ------------------- Fortune page- Fortune presented --------------------------- */
+#fortune{
+    line-height: 1.3em;
+    padding-left: 15px;
+}
+#fortune p {
+	width: 300px;
+	padding-left: 14px;
+	padding-bottom: 6px;
+	padding-top: 6px;
+	letter-spacing: 0.08em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#fortune h2 {
+    color: #444;
+    font-family: 'Arvo',serif;
+    font-size: 2.3em;
+    margin-top: -76px;
+    padding-bottom: 61px;
+    padding-left: 80px;
+}
+.fortuneKeeper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.checkBox {
+    color: #444;
+    float: left;
+    font-size: 1.3em;
+    margin-left: 171px;
+    margin-top: 15px;
+}
+.check {
+	margin-left: 12px;
+}
+.clickSubmit {
+	width: 83px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	font-family: 'Arvo', serif;
+	font-size: 17px;
+	color: #444;
+}
+/* ------------------- Writer's page & Login page --------------------------- */
 
+#postForm {
+	font-family: 'Arvo', serif;
+	font-size: 17px;
+	color: #444;
+}
 
-/* ------------------- Writer's page --------------------------- */
-
-
-/* ------------------- Login page --------------------------- */
-
+#postForm input {
+	width: 300px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	font-family: 'Arvo', serif;
+	font-size: 17px;
+	color: #444;
+}
+#fortuneText {
+	height: 80px;
+}
 
 /* ------------------- Webmaster page --------------------------- */
 
+#table {
+	width: 70%;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 19px;
+}
+#table tr {
+	display: block;
+	margin: 15px;
+	line-height: 1.2em;
+}
+td {
+	padding-bottom:5px;
+	border:solid;
+	border-width: 0px 0px 1px 0px;
+	border-color: #444;
+}
+.databaseH2 {
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+	color: #793e3c;
+	width: 225px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
-
+.td_fortune {
+	padding-left: 20px;
+}
+.td_flag {
+	width: 60px;
+	padding-right: 20px;
+}
+/*
+.headTable {
+	color: #793e3c;
+	font-family: 'Arvo', serif;
+}
+.fortune {
+	padding-left: 20px;
+    padding-right: 413px;
+}
+.flag {
+	width: 60px;
+	padding-right: 20px;
+}
+*/
 /* ------------------- Footer --------------------------- */
 #footer {
 	height:60px;
@@ -94,10 +208,7 @@ body {
 	padding-top: 60px; /* fix this */
 }
 #footer a {
-	margin-left: 10%;
-	margin-right: 10%;
-    padding-left: 7%;
-    padding-right: 7%;
+	margin-left: 25%;
 	font-size: 1.3em;
 }
 #footer p {
